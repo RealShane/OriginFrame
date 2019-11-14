@@ -5,7 +5,9 @@ class Base {
 	//类映射
 	public static $classMap = array();
 	public static function run(){
-		$route = new \origin\Route();
+		
+		$route = new \origin\lib\Route();
+		var_dump($route);
 	}
 	//自动加载类
 	public static function auto_load($class){
@@ -18,7 +20,7 @@ class Base {
 		$class = str_replace('\\', '/', $class);
 		$file_str = BASE.'/'.$class.'.php';
 		if(!is_file($file_str)){
-			echo "致命错误：$class类文件不存在！";
+			echo "致命错误：".$class."类文件不存在！";
 			return false;
 		}
 		//类映射加入
