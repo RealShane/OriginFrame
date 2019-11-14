@@ -1,8 +1,8 @@
 <?php
 
-define('BASE', __DIR__.'/../');//地址IMOOC
-define('ORIGIN', __DIR__);//核心文件CORE
-define("app", BASE.'/app');//项目目录APP
+define('BASE', __DIR__.'/..');//地址
+define('ORIGIN', __DIR__);//核心文件
+define("APP", BASE.'/app');//项目目录
 define("app_debug", true);//DEBUG
 
 if(app_debug){
@@ -15,4 +15,4 @@ require ORIGIN.'/Base.php';
 //类自动加载
 spl_autoload_register('\origin\Base::auto_load');
 
-\origin\Base::run();
+\origin\Base::run_load();
